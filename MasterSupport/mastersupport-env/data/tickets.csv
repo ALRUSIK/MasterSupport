@@ -1,0 +1,24 @@
+Ticket ID,Company Name,DOT Number,Contact Name,Phone Number,Purpose,Description,Date,Representative,Status
+1,Yurii,42352,Yurii,35262,Support,eld,11/4/2023,Yurii,
+2,Matt,432523,Matt,45753463,Support,eld,11/4/2023,Matt,
+3,Yurii,4325634,erfgdf,23534634,support,eld,2023-11-04,Yurii,resolved
+3,Yurii,4325634,erfgdf,23534634,support,eld,2023-11-15,Yurii,pending
+4,CompX,12345,John Doe,5551234567,Inquiry,device setup,11/4/2023,Jane Doe,open
+5,LogiTech,54321,Jane Smith,5557654321,Support,software update,11/5/2023,John Smith,in progress
+6,TransCo,67890,Alan Brown,5559876543,Support,account issue,11/6/2023,Alan White,resolved
+7,GlobalTrans,98765,Emily Green,5553456789,Support,hardware issue,11/7/2023,Emily Black,pending
+8,QuickMove,13579,Bob Blue,5554567890,Support,app error,11/8/2023,Bob Red,open
+9,FastTrack,24680,Carol White,5555678901,Support,login problem,11/9/2023,Carol Grey,in progress
+10,Speedy,86420,David Yellow,5556789012,Support,system update,11/10/2023,David Pink,resolved
+11,ExpressIt,97531,Lisa Purple,5557890123,Support,tracking issue,11/11/2023,Lisa Orange,pending
+12,MoveQuick,75319,Steve Black,5558901234,Support,invoice query,11/12/2023,Steve Brown,open
+13,RapidRoute,95173,Susan Red,5559012345,Support,shipment delay,11/13/2023,Susan Green,in progress
+14,ZoomTrans,15937,Robert Grey,5550123456,Support,device malfunction,11/14/2023,Robert Blue,resolved
+15,FlashMove,35791,Karen Pink,5551234567,Support,password reset,11/15/2023,Karen Yellow,pending
+16,QuickShip,53179,Brian Orange,5552345678,Support,app update,11/16/2023,Brian Purple,open
+17,SpeedDeliver,71359,Angela White,5553456789,Support,new account,11/17/2023,Angela Black,in progress
+18,ExpressWay,13597,Mark Green,5554567890,Support,lost package,11/18/2023,Mark Red,resolved
+19,RapidDeliver,37951,Patricia Blue,5555678901,Support,overcharge,11/19/2023,Patricia Grey,pending
+20,MoveFast,19375,Edward Black,5556789012,Support,update info,11/20/2023,Edward Brown,open
+21,bestway,4325634,lena,34637637,question,stupid,2023-11-05,Adrian,not_resolved
+22,Vlad,3465456,Vlad,3465346457,support,ELD not working,2023-11-05,Yurii,pending

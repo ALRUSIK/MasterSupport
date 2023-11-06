@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Status - MasterSupport Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/static/Logo.png" alt="MasterSupport Logo" height="50" class="d-inline-block align-top">
+            MasterSupport
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/all-tickets">View All Tickets</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="/record-status">Record Status</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <!-- Logo Image -->
+        <div class="text-center my-4">
+            <img src="/static/Logo.png" alt="MasterSupport Logo" class="logo-size">
+        </div>
+        <!-- Employee Check-In/Out Form -->
+        <div id="check-status-form" class="mb-5">
+            <h2>Employee Check-In/Out</h2>
+            <form action="/record-status" method="post" class="mb-4">
+                <input type="text" name="name" placeholder="Employee Name" required class="form-control mb-2">
+                <select name="status" class="form-control mb-2">
+                    <option value="Check-In">Check-In</option>
+                    <option value="Check-Out">Check-Out</option>
+                </select>
+                <select name="location" class="form-control mb-2" required>
+                    <option value="Bensenville">Bensenville</option>
+                    <option value="Poland">Poland</option>
+                </select>
+                <select name="time" class="form-control mb-2" required>
+                    <option value="1 AM">1 AM</option>
+                    <option value="2 AM">2 AM</option>
+                    <option value="3 AM">3 AM</option>
+                    <option value="4 AM">4 AM</option>
+                    <option value="5 AM">5 AM</option>
+                    <option value="6 AM">6 AM</option>
+                    <option value="7 AM">7 AM</option>
+                    <option value="8 AM">8 AM</option>
+                    <option value="9 AM">9 AM</option>
+                    <option value="10 AM">10 AM</option>
+                    <option value="11 AM">11 AM</option>
+                    <option value="12 PM">12 PM</option> <!-- Noon -->
+                    <option value="1 PM">1 PM</option>
+                    <option value="2 PM">2 PM</option>
+                    <option value="3 PM">3 PM</option>
+                    <option value="4 PM">4 PM</option>
+                    <option value="5 PM">5 PM</option>
+                    <option value="6 PM">6 PM</option>
+                    <option value="7 PM">7 PM</option>
+                    <option value="8 PM">8 PM</option>
+                    <option value="9 PM">9 PM</option>
+                    <option value="10 PM">10 PM</option>
+                    <option value="11 PM">11 PM</option>
+                    <option value="12 AM">12 AM</option> <!-- Midnight -->
+                </select>
+                
+                
+                <input type="date" name="date" required class="form-control mb-2">
+                <button type="submit" class="btn btn-primary">Record Status</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+</body>
+</html>

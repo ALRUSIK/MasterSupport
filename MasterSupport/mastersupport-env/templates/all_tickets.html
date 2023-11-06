@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterSupport Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="/">
+            <img src="/static/Logo.png" alt="MasterSupport Logo" height="50" class="d-inline-block align-top">
+            MasterSupport
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/all-tickets">View All Tickets</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/record-status">Record Status</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Filter Form -->
+    <div class="container mt-3">
+        <form action="/all-tickets" method="get" class="mb-4">
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" name="ticket_id" placeholder="Ticket ID" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="company_name" placeholder="Company Name" class="form-control mb-2">
+                </div>
+                <!-- Add more input fields for each criterion you want to filter by -->
+                <div class="col">
+                    <input type="text" name="dot_number" placeholder="DOT Number" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="contact_name" placeholder="Contact Name" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="phone_number" placeholder="Phone Number" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="purpose" placeholder="Purpose" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="date" placeholder="Date" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="representative" placeholder="Representative" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <input type="text" name="status" placeholder="Status" class="form-control mb-2">
+                </div>
+                <div class="col">
+                    <button type="submit" class="btn btn-primary">Filter Tickets</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
+        <h1 class="display-4 text-center">All Support Tickets</h1>
+        <div id="tickets" class="mt-4">
+            <table class="table table-striped">
+                <thead class="thead-dark">
+                    <tr>
+                        <th>Ticket ID</th>
+                        <th>Company Name</th>
+                        <th>DOT Number</th>
+                        <th>Contact Name</th>
+                        <th>Phone Number</th>
+                        <th>Purpose</th>
+                        <th>Description</th>
+                        <th>Date</th>
+                        <th>Representative</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for ticket in tickets %}
+                    <tr class="{{ 'table-danger' if ticket['Status'] == 'not_resolved' else 'table-warning' if ticket['Status'] == 'pending' else 'table-success' }}">
+                        <td>{{ ticket['Ticket ID'] }}</td>
+                        <td>{{ ticket['Company Name'] }}</td>
+                        <td>{{ ticket['DOT Number'] }}</td>
+                        <td>{{ ticket['Contact Name'] }}</td>
+                        <td>{{ ticket['Phone Number'] }}</td>
+                        <td>{{ ticket['Purpose'] }}</td>
+                        <td>{{ ticket['Description'] }}</td>
+                        <td>{{ ticket['Date'] }}</td>
+                        <td>{{ ticket['Representative'] }}</td>
+                        <td>{{ ticket['Status'] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.9/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

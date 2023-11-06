@@ -1,0 +1,161 @@
+/* Custom styles for MasterSupport with company color scheme */
+
+body {
+    background-color: #fff3e0; /* Light orange background */
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Dark text for readability */
+}
+
+.navbar {
+    background-color: #ff6f00; /* Orange background for navbar */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: #fff; /* White text for brand */
+}
+
+.navbar .nav-link {
+    color: #fff; /* White text for nav links */
+    transition: color 0.3s; /* Smooth transition for hover effects */
+}
+
+.navbar .nav-link:hover, .navbar .nav-link:focus {
+    color: #000; /* Black text on hover */
+    background-color: #ffa726; /* Lighter orange background on hover */
+}
+
+.jumbotron {
+    background-color: #ffffff; /* White background for jumbotron */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+.jumbotron .btn {
+    background-color: #ff6f00; /* Orange background for buttons */
+    color: #fff; /* White text for buttons */
+    font-size: 1rem;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+.jumbotron .btn:hover, .jumbotron .btn:focus {
+    background-color: #e65a00; /* Darker orange on hover */
+}
+
+/* Ticket Submission Form Styles */
+#ticket-form {
+    background-color: #fff; /* White background for form */
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15); /* Slight shadow for depth */
+}
+
+#ticket-form h2 {
+    color: #ff6f00; /* Orange text for form heading */
+    margin-bottom: 1.5rem;
+}
+
+#ticket-form .form-control {
+    margin-bottom: 1rem; /* Spacing between form fields */
+    transition: box-shadow 0.3s, border-color 0.3s; /* Smooth transition for focus effects */
+}
+
+#ticket-form .form-control:focus {
+    border-color: #ff6f00; /* Orange border on focus */
+    box-shadow: 0 0 0 0.2rem rgba(255, 111, 0, 0.25); /* Glow effect on focus */
+}
+
+#ticket-form .btn {
+    background-color: #ff6f00; /* Orange background for submit button */
+    color: #fff; /* White text for submit button */
+    transition: background-color 0.3s; /* Smooth transition for hover effects */
+}
+
+#ticket-form .btn:hover, #ticket-form .btn:focus {
+    background-color: #e65a00; /* Darker orange on hover */
+}
+
+/* Tickets Display Section Styles */
+#tickets {
+    margin-top: 3rem;
+}
+
+#tickets h2 {
+    color: #ff6f00; /* Orange text for tickets section heading */
+    margin-bottom: 1rem;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Light grey background for table headers */
+}
+
+tbody tr:hover {
+    background-color: #ffecb3; /* Light orange background on row hover */
+}
+
+/* Status Color Styles */
+.red {
+    background-color: #ffcccc; /* Light red for not resolved */
+}
+
+.yellow {
+    background-color: #ffff99; /* Light yellow for pending */
+}
+
+.green {
+    background-color: #ccffcc; /* Light green for resolved */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar .navbar-toggler {
+        background-color: #fff; /* White color for navbar toggler */
+    }
+
+    .jumbotron .btn {
+        width: 100%; /* Full width for buttons on smaller screens */
+        margin-top: 1rem;
+    }
+
+    #ticket-form, #tickets {
+        padding: 1rem;
+    }
+}
+/* styles.css */
+
+.logo-size {
+    height: 300px; /* Adjust the size as needed */
+    width: auto; /* This will maintain the aspect ratio */
+}
+/* Status Color Styles for Statuses Table */
+.bg-check-in {
+    background-color: #ccffcc !important; /* Very light green for checked in */
+}
+
+.bg-check-out {
+    background-color: #ffcccc; /* Very light red for checked out */
+}
+
+.table {
+    background-color: white; /* Default white background for the table */
+}
+
+/* Additional Custom Styles */
+/* Add any additional styles that you may need here */
